@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "13d2e22f-c1c0-4bea-a8bd-c8d58149b033",
+		"name": "YourStore API",
+		"description": "A free fake API for testing and prototyping e-commerce applications.\n\nContact Support:  \nEmail: [support@fakestoreapi.com](https://mailto:support@fakestoreapi.com)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26425808",
+		"_collection_link": "https://cloudy-water-897741.postman.co/workspace/Prueba-T%C3%A9cnica-Quality-Control-~5d53e6a4-4b7c-49ad-a4e3-9f9f08eb03f7/collection/26425808-13d2e22f-c1c0-4bea-a8bd-c8d58149b033?action=share&source=collection_link&creator=26425808"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Delete a product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1276",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Delete a specific product by ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Get product Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products/99999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"99999"
+							]
+						},
+						"description": "Retrieve details of a specific product by ID."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 15:45:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"16d-ryVvNeDR+OwaJd+i2vi/OPo/G4Y\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VFar3fvN9gWNh%2Fdz5SIsXGlvHlXecLuyJjGJ4vWGm72tl8mEpHW%2B%2BTPrgAcrGFjNNL3GTPmPxeLbhdSdgbtpNn5Ol5rmz7T1p1%2FbKZcb0zM%3D\"}]}"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f102ba191b74ae-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops\",\n    \"price\": 109.95,\n    \"description\": \"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday\",\n    \"category\": \"men's clothing\",\n    \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png\",\n    \"rating\": {\n        \"rate\": 3.9,\n        \"count\": 120\n    }\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products/99999",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"99999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 16:37:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=g7GiQ3hTUbU0vdvYhRyu7n3iGHqc%2F6qoIu4BjDVhECwAnp4xueSO8h11bBPckJtWK325Vq3%2FgLAl%2BmmxTNwOHHEutWIphOp3ca3xQV1DN6Q%3D\"}]}"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f14f472e9b3346-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get all products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"title\": \"string\",\r\n        \"price\": 0.1,\r\n        \"description\": \"string\",\r\n        \"category\": \"string\",\r\n        \"image\": \"http://example.com\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/category/electronics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"category",
+								"electronics"
+							]
+						},
+						"description": "Retrieve a list of all available products."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"title\": \"string\",\r\n        \"price\": 0.1,\r\n        \"description\": \"string\",\r\n        \"category\": \"string\",\r\n        \"image\": \"http://example.com\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/category/electronics",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"category",
+										"electronics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 14:48:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"e31-KVIfMkyn5KcUJ5rA0CyUer/xyks\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uQZ1Tr0NNHB%2BkFGVMk7jbYXHo4dPihrwIjdw9VOmAbxizUDCxgORVqOTDSWNxKCYzYROiBbIYx43ZcEZlTQNHggN8PB9uS51YqFSgLShslE%3D\"}]}"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f0aed98de97482-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 9,\n        \"title\": \"WD 2TB Elements Portable External Hard Drive - USB 3.0 \",\n        \"price\": 64,\n        \"description\": \"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png\",\n        \"rating\": {\n            \"rate\": 3.3,\n            \"count\": 203\n        }\n    },\n    {\n        \"id\": 10,\n        \"title\": \"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s\",\n        \"price\": 109,\n        \"description\": \"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png\",\n        \"rating\": {\n            \"rate\": 2.9,\n            \"count\": 470\n        }\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5\",\n        \"price\": 109,\n        \"description\": \"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png\",\n        \"rating\": {\n            \"rate\": 4.8,\n            \"count\": 319\n        }\n    },\n    {\n        \"id\": 12,\n        \"title\": \"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive\",\n        \"price\": 114,\n        \"description\": \"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png\",\n        \"rating\": {\n            \"rate\": 4.8,\n            \"count\": 400\n        }\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin\",\n        \"price\": 599,\n        \"description\": \"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png\",\n        \"rating\": {\n            \"rate\": 2.9,\n            \"count\": 250\n        }\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED \",\n        \"price\": 999.99,\n        \"description\": \"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag\",\n        \"category\": \"electronics\",\n        \"image\": \"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png\",\n        \"rating\": {\n            \"rate\": 2.2,\n            \"count\": 140\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add a new product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Producto inválido\",\n    \"price\": \"pruebas\",\n    \"description\": \"Prueba negativa\",\n    \"image\": \"https://i.pravatar.cc\",\n    \"category\": \"electronics\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Create a new product."
+					},
+					"response": [
+						{
+							"name": "Sucess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"QA Test Product\",\n  \"price\": 199.99,\n  \"description\": \"Producto de prueba técnica\",\n  \"category\": \"electronics\",\n  \"image\": \"https://i.pravatar.cc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 15:53:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "151"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"97-h0ZqA8JBIYeqWonznqYDD1nMdOQ\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uSu1kmfYS0%2B378UFK2O%2BF3vV1qPFUDOWcZ24W3D3UuuejuvEqe%2Fvx%2FQrRnf9ZGtLKpJyr%2Fu6fKZxQCkAVIi7DUzuRx%2BxrV4bWmOF9iZ5\"}]}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f10effec5f4c1e-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 21,\n    \"title\": \"QA Test Product\",\n    \"price\": 199.99,\n    \"description\": \"Producto de prueba técnica\",\n    \"image\": \"https://i.pravatar.cc\",\n    \"category\": \"electronics\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Producto inválido\",\n    \"price\": \"pruebas\",\n    \"description\": \"Prueba negativa\",\n    \"image\": \"https://i.pravatar.cc\",\n    \"category\": \"electronics\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 16:49:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"91-XJgQSefHS5soZZ2+zFyKKScLf6A\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9%2BpUwjY5XdOSkWbFE7RbqYvfnMDXWI5UrUjV%2BjuzHDDktx6xanMlhQrvb5e8E1pVT%2FJXKVpl8l3vEpNTFMq4MmrGeIEfNaqwKYkiYjSfaWk%3D\"}]}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f160129e62cf9a-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 21,\n    \"title\": \"Producto inválido\",\n    \"price\": \"pruebas\",\n    \"description\": \"Prueba negativa\",\n    \"image\": \"https://i.pravatar.cc\",\n    \"category\": \"electronics\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 21,\n  \"title\": \"QA Test Product\",\n  \"price\": 199.99,\n  \"description\": \"Producto de prueba técnica\",\n  \"category\": \"electronics\",\n  \"image\": \"https://i.pravatar.cc/150?img=6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/abc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"abc"
+							]
+						},
+						"description": "Update an existing product by ID."
+					},
+					"response": [
+						{
+							"name": "Sucess",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 21,\n  \"title\": \"QA Test Product\",\n  \"price\": 199.99,\n  \"description\": \"Producto de prueba técnica\",\n  \"category\": \"electronics\",\n  \"image\": \"https://i.pravatar.cc/150?img=6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/21",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"21"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 16:04:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"a1-4zs6N5wOQk0yhmG2sUSKmKyxLmA\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gAJ9NJyjaimvjAzEloa0M1KcYdZuxtSU03YJbF3LvHAcyRT8VS%2FfG8mSLK5dcVtc%2Fq3Djq%2B9qHkZe74K2J5SRyeYV8hChIRlzWAP2YPiZxg%3D\"}]}"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f11e44583fe9f3-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 21,\n    \"title\": \"QA Test Product\",\n    \"price\": 199.99,\n    \"description\": \"Producto de prueba técnica\",\n    \"image\": \"https://i.pravatar.cc/150?img=6\",\n    \"category\": \"electronics\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 21,\n  \"title\": \"QA Test Product\",\n  \"price\": 199.99,\n  \"description\": \"Producto de prueba técnica\",\n  \"category\": \"electronics\",\n  \"image\": \"https://i.pravatar.cc/150?img=6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/abc",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"abc"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 14 Sep 2025 16:46:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"49-hC/Pxxrd/7/1JT1dQBok5DscJPQ\""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Z8FdfL3Tvp9wP1Paa6y7KZMUkOcGecq32t%2F4tDc60JwUszWKRkmhg%2BB1n8tCRajzBMsPiwFg2yOYzAH33g%2Bpl2yc4u6RiMPfaHaeedbmWJA%3D\"}]}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "97f15bdeff7ea554-MIA"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"something went wrong! check your sent data\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://fakestoreapi.com",
+			"type": "string"
+		}
+	]
+}
