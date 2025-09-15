@@ -99,6 +99,32 @@ Las pruebas críticas de la tienda fueron automatizadas con **Cypress** usando *
 - Eliminar productos del carrito
 - Aumentar cantidad de ítems
 - Checkout hasta confirmación de la orden
+### 🛠 Requisitos Previos
+
+Para ejecutar correctamente las pruebas automatizadas UI con **Cypress**, asegúrate de cumplir con los siguientes requisitos:
+
+1. **Node.js v18 o superior**  
+   - Incluye **npm** para instalar dependencias.  
+   - [https://nodejs.org/](https://nodejs.org/)
+
+2. **Cypress**  
+   - Se instala automáticamente al ejecutar `npm install` si está listado en `package.json`.  
+   - Permite ejecutar pruebas en modo interactivo o headless.
+
+3. **Git**  
+   - Necesario para clonar el repositorio.  
+   - [https://git-scm.com/](https://git-scm.com/)
+
+4. **Navegador soportado**  
+   - Chrome, Edge o Firefox (última versión recomendada).
+
+5. **Conexión estable a Internet**  
+   - Requerida para acceder a la tienda de pruebas: `https://opencart.abstracta.us`
+
+6. **Dependencias del proyecto**  
+   - Instálalas ejecutando:
+   ```bash
+   npm install
 
 ### Ejecución
 ```bash
