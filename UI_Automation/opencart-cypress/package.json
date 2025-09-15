@@ -1,0 +1,12 @@
+{
+  "name": "opencart-cypress",
+  "version": "1.0.0",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.0.0"
+  }
+}

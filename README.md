@@ -32,7 +32,9 @@ Este repositorio contiene la solución a la prueba técnica enviada por **Double
 ### 🛠 Herramientas utilizadas
 - **Postman** → Pruebas funcionales y casos negativos  
 - **JMeter** → Pruebas de carga y estrés  
-
+- **Cypress + JavaScript** → Automatización UI
+- **Power BI** → Análisis de resultados
+- **GitHub** → Versionamiento y documentación
 ---
 
 ## ✅ Pruebas funcionales realizadas
@@ -79,3 +81,29 @@ Este repositorio contiene la solución a la prueba técnica enviada por **Double
 ![Resultados de Power BI](Performance_Testing/imagenes/Stress_Test_Results.png)
 
 ---
+
+
+---
+
+## ✅ Pruebas Automatizadas (UI – Cypress)
+
+Las pruebas críticas de la tienda fueron automatizadas con **Cypress** usando **Page Object Model (POM)**:
+
+### Funcionalidades cubiertas:
+- Registro de usuario
+- Inicio de sesión
+- Restablecimiento de contraseña
+- Navegación a *Laptops & Notebooks*
+- Agregar un **MacBook Pro** al carrito
+- Buscar y agregar una **Samsung Galaxy Tablet**
+- Eliminar productos del carrito
+- Aumentar cantidad de ítems
+- Checkout hasta confirmación de la orden
+
+### Ejecución
+```bash
+# Ejecutar en modo interactivo
+npx cypress open
+
+# Ejecutar en modo headless
+npx cypress run --spec "cypress/e2e/shoppingFlow.cy.js"
