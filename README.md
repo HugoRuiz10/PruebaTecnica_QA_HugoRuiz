@@ -74,7 +74,8 @@ Este repositorio contiene la solución a la prueba técnica enviada por **Double
 ---
 
 ## 📊 Resultados
-- Los reportes de las pruebas se encuentran en la carpeta `Performance_Testing/reports/`  
+- Los reportes de las pruebas se encuentran en la carpeta `Performance_Testing/reports/` ![Resultados de Power BI](Performance_Testing/LoadTest_150Users.png)
 - El análisis adicional está disponible en `results/resultados_prueba.pbix`  
+![Resultados de Power BI](Performance_Testing/Stress_Test_Results.png)
 
 ---
